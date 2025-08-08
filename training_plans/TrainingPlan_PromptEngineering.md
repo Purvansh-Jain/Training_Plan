@@ -142,7 +142,7 @@ Implement the methods `add_book`, `remove_book`, `search_by_title`, `search_by_a
 
 ### Java – Code Migration
 
-1. Legacy to Modern Java
+Legacy to Modern Java
 
 Migrate the class in `java_migration/legacy_java/Example.java` to Java 17.  
 
@@ -150,7 +150,7 @@ Migrate the class in `java_migration/legacy_java/Example.java` to Java 17.
 
 ### Documentation & Diagrams
 
-1. Generate Documentation and Diagram
+Generate Documentation and Diagram
 
 In `python_examples/model_script.py`:
 
