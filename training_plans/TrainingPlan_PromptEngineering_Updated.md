@@ -82,13 +82,13 @@ Use the following prompt to implement the `calculate_student_statistics` functio
 
 2. Normalise Scores
 
-    Implement `normalise_scores` in `python_examples/data_processing.py`:
+Implement `normalise_scores` in `python_examples/data_processing.py`:
     
       Given a list of scores and an optional target, scale the scores proportionally so that the highest score equals the target.  Preserve the original order.  If the list is empty, return an empty list.  If the maximum is zero, return a list of zeros.
 
 3. Group by Grade
 
-    Implement the `group_by_grade` function in `python_examples/data_processing.py`:
+Implement the `group_by_grade` function in `python_examples/data_processing.py`:
     
      Group numeric scores into letter grades (A: 90–100, B: 80–89, C: 70–79, D: 60–69, F: <60) and return a dictionary mapping each grade to its list of scores.  Exclude empty grades.
 
