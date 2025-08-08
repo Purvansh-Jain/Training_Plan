@@ -18,18 +18,18 @@ Before using GitHub Copilot, ensure you meet these prerequisites:
 
 1. **Enterprise Licence** – Copilot is provided through our organisation’s enterprise licence.  Do **not** purchase a personal subscription.  Make sure your GitHub account is part of the **Programmers.ai** organisational account so that billing and policies are centralised.
 
-2. **GitHub Account** – If you don’t have a GitHub account, create one using your corporate email.  Ask your administrator to add your account to the Programmers.io organisation.  All code should be committed under the organisation to maintain access control and compliance.
+2. **GitHub Account** – If you don’t have a GitHub account, create one using your corporate email.  Ask your administrator to add your account to the Programmers.ai organisation.  All code should be committed under the organisation to maintain access control and compliance.
 
 3. **Visual Studio Code** – Download the latest [VS Code](https://code.visualstudio.com/) for your operating system.  Copilot integrates seamlessly with VS Code.
 
 4. **Git** – Install Git so you can clone repositories, create branches and push changes.
 
-# Windows
+### Windows
 - Download **Git for Windows**: https://git-scm.com/download/win  
 - Run the installer (default options are fine).  
 - Verify: `git --version`
 
-## Linux
+### Linux
 - Update packages: `sudo apt update`  
 - Install: `sudo apt install git` (use your distro’s package manager if different)  
 - Verify: `git --version`
@@ -37,8 +37,6 @@ Before using GitHub Copilot, ensure you meet these prerequisites:
 ### MacOS
 - With Homebrew: `brew install git`  
 - Verify: `git --version`
-
-5. **Programming Foundations** – Copilot can generate code in many languages, but you should be comfortable with variables, loops, conditional statements, functions, classes, and basic data structures.  Familiarity with algorithm complexity (e.g. O(n), O(n log n)) helps you assess the performance of AI‑generated code.
 
 ---
 
@@ -56,14 +54,14 @@ This section walks you through installing the Copilot extension, authenticating 
 
 1. After installation, a prompt will appear asking you to **Sign in to GitHub**.  Click **Sign In**.
 2. Choose **“Continue with GitHub”** and enter your corporate credentials.  Complete any multi‑factor authentication.
-3. When asked to authorise Copilot, confirm that the **Programmers.io** organisation is listed and click **Authorize**.  This links your Copilot usage to the organisation’s licence.
+3. When asked to authorise Copilot, confirm that the **Programmers.ai** organisation is listed and click **Authorize**.  This links your Copilot usage to the organisation’s licence.
 4. Return to VS Code.  You should see a confirmation message that Copilot is active.
 
 ### 3.3  Enable Suggestions and Agentic Mode
 
 Copilot suggestions appear as faded code (ghost text) while you type.  To control when they appear:
 
-1. Open the **Command Palette** (`Ctrl+Shift+P`) and run **“Copilot: Toggle Completions”** (or **Enable/Disable Completions** in some builds). You can turn inline suggestions on or off at any time.
+1. Open the **Command Palette** (`Ctrl+Shift+P`) and run **“Copilot: Toggle Completions”** (or **Enable/Disable Completions** in some builds).
 2. In **Settings** (File → Preferences → Settings), search for **“Inline Completions”** and set **Enable** to **On**.
 
 **Agentic settings to know (search these in Settings):**
@@ -77,7 +75,7 @@ Copilot suggestions appear as faded code (ghost text) while you type.  To contro
 
 **Agentic Mode** is an advanced feature that allows Copilot to perform multi‑step tasks, such as refactoring a file or migrating code between frameworks.  To enable it (if available to the organisation):
 1. Open the Command Palette and run **“Copilot: Agents: Enable/Disable”** (names vary slightly by version). You can also use **“Copilot: Toggle Completions”**, **“Copilot: Open Completions Panel”**, **“Copilot: Explain This Code”**, and **“Copilot: Generate Tests”** to drive agentic workflows.
-2. Ensure it’s **Enabled**.  When agent mode is active, you can instruct Copilot using high‑level tasks like “Migrate this Express 4 API to FastAPI in Python” or “Convert this AngularJS component to React 18 with TypeScript.”  Copilot will propose changes and ask you to confirm before applying them.
+2. Ensure it’s **Enabled**.  When agent mode is active, you can instruct Copilot using high‑level tasks like “Migrate this ExpressJS API to FastAPI in Python” or “Convert this AngularJS component to React 18 with TypeScript.”  Copilot will propose changes and ask you to confirm before applying them.
 
 ### 3.4  Install and Use Copilot Chat (Optional)
 
@@ -104,7 +102,7 @@ Data structures influence performance.  Arrays and lists provide fast indexed ac
 
 Performance matters, especially in large data sets.  Copilot may generate a naive implementation if you do not specify a complexity requirement.  If you need a sort algorithm faster than O(n²), ask explicitly for merge sort (O(n log n)) or quicksort.  When dealing with memory, mention whether you can afford extra space or require an in‑place algorithm.
 
-### 4.4  Prompt Examples (Python‑only, one consistent example)
+### 4.4  Prompt Examples
 
 We’ll use **one** running example so every prompt builds on the same code: a function that computes the **median** of a list of integers.
 
@@ -160,4 +158,4 @@ The following videos provide hands‑on demonstrations of AI coding tools.  Veri
 
 ## 7  Summary
 
-By following this training plan, you will learn how to install and enable GitHub Copilot using the Programmers.io enterprise licence, configure optional features like Copilot Chat and Agentic mode, and leverage algorithmic thinking to craft effective prompts.  Practising with the exercises in the accompanying repository will help solidify these skills.  Remember to review all AI‑generated code carefully, ensure it meets your organisation’s quality standards, and iteratively refine your prompts for the best results.
+By following this training plan, you will learn how to install and enable GitHub Copilot using the Programmers.ai enterprise licence, configure optional features like Copilot Chat and Agentic mode, and leverage algorithmic thinking to craft effective prompts.  Practising with the exercises in the accompanying repository will help solidify these skills.  Remember to review all AI‑generated code carefully, ensure it meets your organisation’s quality standards, and iteratively refine your prompts for the best results.
