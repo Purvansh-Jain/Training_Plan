@@ -1,28 +1,28 @@
 # Prompt Engineering Training Plan
 
-Large‑language models (LLMs) such as GPT‑4 underpin tools like GitHub Copilot and RooCode.  Their usefulness depends entirely on the **prompts** you provide.  Prompt engineering is the practice of crafting clear, precise instructions that guide an AI model toward the desired output.  This training plan teaches developers how to design effective prompts based on sound computer‑science principles.  It revisits first‑year topics like algorithms, data structures and problem decomposition, and demonstrates how these concepts improve your prompts.  Whether you are new to AI or looking to refine your skills, this guide will help you harness the full potential of Copilot and RooCode.
+Large‑language models (LLMs) usefulness depends entirely on the **prompts** you provide. Prompt engineering is the practice of crafting clear, precise instructions that guide an AI model toward the desired output.  This training plan teaches developers how to design effective prompts based on sound computer‑science principles.  It revisits first‑year topics like algorithms, data structures and problem decomposition, and demonstrates how these concepts improve your prompts.  Whether you are new to AI or looking to refine your skills, this guide will help you harness the full potential of Copilot and RooCode.
 
 ---
 
-## 1  Why Prompt Engineering Matters
+## A]  Why Prompt Engineering Matters
 
 When you ask a model to “write some code,” you leave it to guess what you need.  If you specify your goal, inputs, expected outputs, constraints and examples, you narrow the possibilities and increase accuracy.  Poorly written prompts lead to incorrect, incomplete or inefficient code; clear prompts result in reliable, maintainable solutions.  The principles of prompt engineering apply across languages and tools.  They are especially important when working with enterprise projects where security, performance and readability are critical.
 
-### 1.1  Algorithmic Context
+### 1  Algorithmic Context
 
 Programming tasks are built on algorithms and data structures.  In first‑year computer‑science courses you learn patterns like linear search, binary search, sorting algorithms and recursion.  You also learn to choose between lists, dictionaries, stacks, queues, trees and graphs.  When writing prompts, refer to these patterns explicitly: *“Implement a binary search algorithm”* or *“Use a hash map keyed by user ID”*.  This helps the model understand the performance requirements and data relationships.
 
-### 1.2  Clarity and Detail
+### 2  Clarity and Detail
 
 Ambiguity is the enemy of prompt engineering.  Avoid vague terms like “improve,” “better” or “clean up.”  Instead specify what you want to change and why.  For example: *“Refactor this function to reduce its time complexity from O(n²) to O(n log n)”* or *“Rewrite this code to follow PEP 8 style guidelines.”*  Provide the relevant code or function signature so the model has context.  If you need documentation, specify the format (docstring, JSDoc, Markdown) and include examples.
 
-### 1.3  Iterative Refinement
+### 3  Iterative Refinement
 
 Prompt engineering is not a one‑shot process.  After receiving a response from the model, review the output.  If it contains mistakes or omissions, adjust your prompt by adding constraints or examples.  Repeat until the output meets your requirements.  Keep a record of effective prompts to reuse and share with teammates.
 
 ---
 
-## 2  Anatomy of a Well‑Structured Prompt
+## B]  Anatomy of a Well‑Structured Prompt
 
 A well‑structured prompt typically includes these elements:
 
@@ -42,35 +42,35 @@ This prompt defines the role, task, input, output, constraints and format, leavi
 
 ---
 
-## 3  Principles for Effective Prompting
+## C]  Principles for Effective Prompting
 
 Use these principles to design prompts that yield accurate and useful results:
 
-### 3.1  Be Specific
+### 1  Be Specific
 
 Specify what you want the model to do and how it should do it.  For example, *“Generate a list of prime numbers up to 100 using the Sieve of Eratosthenes”* is better than *“Write a prime generator.”*  Include relevant constraints like time complexity or memory usage.
 
-### 3.2  Decompose Complex Tasks
+### 2  Decompose Complex Tasks
 
 Breaking large problems into smaller tasks improves the quality of the output and makes it easier to debug.  For instance, when building a web service, separate prompts for data models, API endpoints, input validation and tests.  This mirrors algorithmic decomposition: solve subproblems and compose the results.
 
-### 3.3  Provide Examples
+### 3  Provide Examples
 
 Demonstrate the expected input and output format.  If you want the model to produce a JSON response, include a sample JSON.  For diagrams, provide a small Mermaid snippet.  Examples act as a template the model can emulate.
 
-### 3.4  Ask for Explanations
+### 4  Ask for Explanations
 
 When you need to understand code or make improvements, ask the model to explain what the code does and why.  For example: *“Explain how this function calculates the Fibonacci sequence and suggest two optimisations.”*  Explanations reveal the model’s reasoning and help you identify errors or inefficiencies.
 
-### 3.5  Use Chat Interfaces for Exploration
+### 5  Use Chat Interfaces for Exploration
 
 Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative prompting.  You can ask for clarifications, request alternative implementations or explore different design choices.  This interactive approach is particularly useful when working on unfamiliar tasks.
 
 ---
 
-## 4  Training Exercises
+## D]  Training Exercises
 
-Use the exercises in the `training_repo_final` to practise prompt engineering.  Focus on Python tasks and apply the principles above.  After each task, review the generated code, adjust your prompts and rerun the model.
+Use the exercises in the `training_repo` to practise prompt engineering.  Focus on Python tasks and apply the principles above.  After each task, review the generated code, adjust your prompts and rerun the model.
 
 1. **Password Validation** – Prompt the AI to implement a function `is_strong_password(password: str) -> bool` based on specific criteria.  Ask for type hints, a docstring and example calls.
 2. **Sorting Algorithms** – Ask the model to implement bubble sort, selection sort and merge sort on a list of integers.  Request a complexity analysis and test cases.  Compare the generated algorithms and discuss which is more efficient.
@@ -83,23 +83,22 @@ These exercises will sharpen your ability to design prompts that produce reliabl
 
 ---
 
-## 5  Additional Resources
+## E]  Additional Resources
 
 * **OpenAI Prompt Engineering Guide** – [https://platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering) – Official guide with examples and best practices.
 * **GitHub Copilot Prompt Guide** – [https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/](https://github.blog/2023-09-12-how-to-write-better-prompts-for-github-copilot/) – Tips for crafting prompts specifically for Copilot.
-* **Effective Prompts Cheat Sheet** – [https://docs.roocode.com/prompting](https://docs.roocode.com/prompting) – RooCode documentation with prompt patterns and examples.
-* **RooCode Prompt Library** – See the `prompt_library.md` in the companion repository for ready‑to‑use prompt templates.
+
 
 Videos:
 
 | Topic                       | Video Title                                           | Link                                                              | Description                                       |
 |-----------------------------|-------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------|
-| Prompt Engineering Basics   | *Prompt Engineering for Beginners*                   | [Watch](https://www.youtube.com/watch?v=CLbQY9kQypA)               | Introduction to prompt design and common pitfalls. |
-| Advanced Prompt Techniques  | *Advanced Prompt Engineering with GPT-4*             | [Watch](https://www.youtube.com/watch?v=SczjJyOp5Jw)               | Covers complex tasks, multi‑step prompts and more. |
-| AI Pair Programming Demo    | *How I Use ChatGPT to Build a Flask API*             | [Watch](https://www.youtube.com/watch?v=hE2f7Y-3_lU)               | Shows iterative prompting to build a real project. |
+| Prompt Engineering Basics   | *Prompt Engineering for Beginners*                   | [Watch](https://youtu.be/riO3e-FBieA?si=86gIO74zk2tYrjSW)               | Introduction to prompt design and common pitfalls. |
+| Advanced Prompt Techniques  | *Advanced Prompt Engineering with GPT-4*             | [Watch](https://youtu.be/-XivIt_5oSw?si=agLozvFqrGiLT4Oz)               | Covers complex tasks, multi‑step prompts and more. |
+| Demo    | *Master the core principles of prompt engineering with GitHub Copilot*             | [Watch](https://youtu.be/hh1nOX14TyY?si=flrngVtmrDbwFYEv)               | Shows iterative prompting to build a real project. |
 
 ---
 
-## 6  Summary
+## F]  Summary
 
 Prompt engineering is a critical skill for working with AI coding assistants.  By grounding your prompts in algorithmic thinking, providing clear objectives and constraints, and iteratively refining your instructions, you can guide models like Copilot and RooCode to produce high‑quality code, tests, documentation and diagrams.  Use the exercises and resources in this plan to practise and improve.  As you gain experience, share effective prompts with your colleagues to build a collective knowledge base.
