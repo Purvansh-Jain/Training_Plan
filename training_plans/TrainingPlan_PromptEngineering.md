@@ -153,7 +153,9 @@ Migrate the class in `java_migration/legacy_java/Example.java` to Java 17.
 1. Generate Documentation and Diagram
 
 In `python_examples/model_script.py`:
-    Generate Markdown documentation with docstrings and a Mermaid diagram showing the relationships among `Author`, `Book` and `Library`.  The diagram should depict classes as nodes and references as arrows.
+
+    Generate Markdown documentation with docstrings for the `Author`, `Book` and `Library` classes.  Include a Mermaid diagram showing the relationships among these classes, with `Author` having a one‑to‑many relationship with `Book`, and `Library` containing multiple `Book` instances.
+
 
     Create a README for the Student Performance Dashboard described in `requirements/BRD.md`.  Include an overview of the project, setup instructions, API endpoints and a Mermaid diagram illustrating the data flow from ingestion to report generation.
 
