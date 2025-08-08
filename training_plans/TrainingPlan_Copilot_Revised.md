@@ -22,10 +22,21 @@ Before using GitHub Copilot, ensure you meet these prerequisites:
 
 3. **Visual Studio Code** – Download the latest [VS Code](https://code.visualstudio.com/) for your operating system.  Copilot integrates seamlessly with VS Code.
 
-4. **Git** – Install Git so you can clone repositories, create branches and push changes.  
-On Windows, download **Git for Windows** from [git‑scm.com](https://git-scm.com/download/win).  
-On macOS, run `brew install git`.
-On Linux, run `sudo apt install git` or the equivalent for your distribution.
+4. **Git** – Install Git so you can clone repositories, create branches and push changes.
+
+# Windows
+- Download **Git for Windows**: https://git-scm.com/download/win  
+- Run the installer (default options are fine).  
+- Verify: `git --version`
+
+## Linux
+- Update packages: `sudo apt update`  
+- Install: `sudo apt install git` (use your distro’s package manager if different)  
+- Verify: `git --version`
+
+### MacOS
+- With Homebrew: `brew install git`  
+- Verify: `git --version`
 
 5. **Programming Foundations** – Copilot can generate code in many languages, but you should be comfortable with variables, loops, conditional statements, functions, classes, and basic data structures.  Familiarity with algorithm complexity (e.g. O(n), O(n log n)) helps you assess the performance of AI‑generated code.
 
@@ -52,12 +63,21 @@ This section walks you through installing the Copilot extension, authenticating 
 
 Copilot suggestions appear as faded code (ghost text) while you type.  To control when they appear:
 
-1. Open the **Command Palette** (`Ctrl+Shift+P`) and run **“Copilot: Enable Suggestions”**.  You can toggle suggestions on or off.
-2. In **Settings** (File → Preferences → Settings), search for **“Inline Completions”** and set **Enable** to **On**.  
+1. Open the **Command Palette** (`Ctrl+Shift+P`) and run **“Copilot: Toggle Completions”** (or **Enable/Disable Completions** in some builds). You can turn inline suggestions on or off at any time.
+2. In **Settings** (File → Preferences → Settings), search for **“Inline Completions”** and set **Enable** to **On**.
+
+**Agentic settings to know (search these in Settings):**
+- `chat.agent.enabled` — enable/disable agent mode (requires recent VS Code).
+- `chat.agent.maxRequests` — max background requests an agent can make.
+- `github.copilot.chat.agent.runTasks` — allow agent to run workspace tasks.
+- `chat.mcp.discovery.enabled` — discover MCP servers from other tools.
+- `github.copilot.chat.agent.autoFix` — attempt automatic fixes on generated changes.
+- `chat.tools.autoApprove` (experimental) — auto‑approve tool usage (keep **false** unless you know why).
+
 
 **Agentic Mode** is an advanced feature that allows Copilot to perform multi‑step tasks, such as refactoring a file or migrating code between frameworks.  To enable it (if available to the organisation):
-1. Open the Command Palette and run **“Copilot: Turn On/Off Agents”**.
-2. Select **On**.  When agent mode is active, you can instruct Copilot using high‑level tasks like “Migrate this Express 4 API to FastAPI in Python” or “Convert this AngularJS component to React 18 with TypeScript.”  Copilot will propose changes and ask you to confirm before applying them.
+1. Open the Command Palette and run **“Copilot: Agents: Enable/Disable”** (names vary slightly by version). You can also use **“Copilot: Toggle Completions”**, **“Copilot: Open Completions Panel”**, **“Copilot: Explain This Code”**, and **“Copilot: Generate Tests”** to drive agentic workflows.
+2. Ensure it’s **Enabled**.  When agent mode is active, you can instruct Copilot using high‑level tasks like “Migrate this Express 4 API to FastAPI in Python” or “Convert this AngularJS component to React 18 with TypeScript.”  Copilot will propose changes and ask you to confirm before applying them.
 
 ### 3.4  Install and Use Copilot Chat (Optional)
 
@@ -84,20 +104,24 @@ Data structures influence performance.  Arrays and lists provide fast indexed ac
 
 Performance matters, especially in large data sets.  Copilot may generate a naive implementation if you do not specify a complexity requirement.  If you need a sort algorithm faster than O(n²), ask explicitly for merge sort (O(n log n)) or quicksort.  When dealing with memory, mention whether you can afford extra space or require an in‑place algorithm.
 
-### 4.4  Prompt Examples
+### 4.4  Prompt Examples (Python‑only, one consistent example)
 
-Here are examples of well‑structured prompts:
+We’ll use **one** running example so every prompt builds on the same code: a function that computes the **median** of a list of integers.
 
-* **Generate Code:**
-  - *“Write a Python function `calculate_median(scores: list[int]) -> float` that computes the median of a list of integers.  If the list has an even number of elements, return the average of the two middle values.  Use a sort algorithm with O(n log n) time complexity.  Include a docstring and type hints.”*
-* **Refactor Code:**
-  - *“Refactor this C# method to use the LINQ `GroupBy` and `Select` operators instead of nested loops.  The method currently groups a list of orders by customer ID and summarises total order amounts.”*
-* **Write Tests:**
-  - *“Generate NUnit tests for the method `CalculateTotalPrice(List<Item> items)` in `ShoppingCart.cs`.  Include tests for empty lists, lists with one item and lists with multiple items.  Use assertion messages that describe each scenario.”*
-* **Explain and Document:**
-  - *“Explain what this Java function does: … Include a summary, list the key parameters and return value, and suggest improvements.  Format the response in Markdown.”*
+* **Generate Code:**  
+  - *“Write a Python function `calculate_median(scores: list[int]) -> float` that computes the median of a list of integers. If the list has an even number of elements, return the average of the two middle values. Use a sort with O(n log n) time. Include a docstring and type hints.”*
+
+* **Refactor Code:**  
+  - *“Refactor `calculate_median` to avoid sorting the entire list by using a selection algorithm (e.g., `statistics.median` or `heapq.nsmallest`). Preserve the function signature and include error handling for empty input.”*
+
+* **Write Tests:**  
+  - *“Generate `pytest` unit tests for `calculate_median`. Cover: odd length, even length, duplicates, negative numbers, large lists, and the empty‑list error path. Use clear assertion messages.”*
+
+* **Explain and Document:**  
+  - *“Explain what `calculate_median` does, define the input/output, the chosen algorithm and its complexity, list edge cases, and include the function’s docstring in reStructuredText or Google style.”*
 
 These prompts specify the task, desired output and constraints, increasing the quality and relevance of Copilot’s suggestions.
+
 
 ---
 
