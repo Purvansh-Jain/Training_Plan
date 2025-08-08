@@ -4,7 +4,7 @@ This document is a comprehensive training plan for developers which allow them t
 
 ---
 
-## 1  Purpose
+## A]  Purpose
 
 Offshore teams and remote developers can use the same instructions to set up Copilot on their machines and connect to the **Programmers.ai** organisation.  This ensures consistent configuration and governance across all locations.  
 
@@ -12,7 +12,7 @@ Offshore teams and remote developers can use the same instructions to set up Cop
 
 ---
 
-## 2  Prerequisites and Organisational Setup
+## B]  Prerequisites and Organisational Setup
 
 Before using GitHub Copilot, ensure you meet these prerequisites:
 
@@ -40,7 +40,7 @@ Before using GitHub Copilot, ensure you meet these prerequisites:
 
 ---
 
-## 3  Installing and Enabling GitHub Copilot
+## C]  Installing and Enabling GitHub Copilot
 
 This section walks you through installing the Copilot extension, authenticating via the organisation’s account and enabling suggestions.  It also introduces optional features like Copilot Chat and Agentic mode.
 
@@ -86,7 +86,7 @@ Copilot Chat is a separate extension that offers a chat interface similar to Ch
 
 ---
 
-## 4  Algorithmic Thinking and Prompt Crafting
+## D]  Algorithmic Thinking and Prompt Crafting
 
 To maximise Copilot’s usefulness, you need to think like a computer scientist.  This section revisits fundamental algorithms and data structures and shows how they inform prompt design.
 
@@ -123,7 +123,7 @@ These prompts specify the task, desired output and constraints, increasing the q
 
 ---
 
-## 5  Training Exercises
+## E]  Training Exercises
 
 Use the accompanying `training_repo_final` repository to practise what you’ve learned.  Start by cloning the repo and opening it in VS Code.  The exercises below are written primarily in **Python**, with one Java file for code migration practice.  Instructions are in the `training_exercises.md` file of the repository.
 
@@ -137,7 +137,7 @@ These exercises will help you practise prompting, algorithmic thinking and revie
 
 ---
 
-## 6  Additional Resources
+## F]  Additional Resources
 
 ### Articles
 
@@ -156,6 +156,6 @@ The following videos provide hands‑on demonstrations of AI coding tools.  Veri
 
 ---
 
-## 7  Summary
+## G]  Summary
 
 By following this training plan, you will learn how to install and enable GitHub Copilot using the Programmers.ai enterprise licence, configure optional features like Copilot Chat and Agentic mode, and leverage algorithmic thinking to craft effective prompts.  Practising with the exercises in the accompanying repository will help solidify these skills.  Remember to review all AI‑generated code carefully, ensure it meets your organisation’s quality standards, and iteratively refine your prompts for the best results.
