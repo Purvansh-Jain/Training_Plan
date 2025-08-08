@@ -16,7 +16,7 @@ Programming tasks are built on algorithms and data structures.  In first‑year 
 
 Ambiguity is the enemy of prompt engineering.  Avoid vague terms like “improve,” “better” or “clean up.”  Instead specify what you want to change and why.  For example: *“Refactor this function to reduce its time complexity from O(n²) to O(n log n)”* or *“Rewrite this code to follow PEP 8 style guidelines.”*  Provide the relevant code or function signature so the model has context.  If you need documentation, specify the format (docstring, JSDoc, Markdown) and include examples.
 
-### 3  Iterative Refinement
+### 3.  Iterative Refinement
 
 Prompt engineering is not a one‑shot process.  After receiving a response from the model, review the output.  If it contains mistakes or omissions, adjust your prompt by adding constraints or examples.  Repeat until the output meets your requirements.  Keep a record of effective prompts to reuse and share with teammates.
 
@@ -152,7 +152,8 @@ Migrate the class in `java_migration/legacy_java/Example.java` to Java 17.
 
 1. Generate Documentation and Diagram
 
-    In `python_examples/model_script.py`, generate Markdown documentation with docstrings and a Mermaid diagram showing the relationships among `Author`, `Book` and `Library`.  The diagram should depict classes as nodes and references as arrows.
+In `python_examples/model_script.py`:
+    Generate Markdown documentation with docstrings and a Mermaid diagram showing the relationships among `Author`, `Book` and `Library`.  The diagram should depict classes as nodes and references as arrows.
 
     Create a README for the Student Performance Dashboard described in `requirements/BRD.md`.  Include an overview of the project, setup instructions, API endpoints and a Mermaid diagram illustrating the data flow from ingestion to report generation.
 

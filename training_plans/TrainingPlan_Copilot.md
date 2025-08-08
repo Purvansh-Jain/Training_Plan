@@ -102,7 +102,7 @@ Data structures influence performance.  Arrays and lists provide fast indexed ac
 
 Performance matters, especially in large data sets.  Copilot may generate a naive implementation if you do not specify a complexity requirement.  If you need a sort algorithm faster than O(n²), ask explicitly for merge sort (O(n log n)) or quicksort.  When dealing with memory, mention whether you can afford extra space or require an in‑place algorithm.
 
-### 4  Prompt Examples
+### 4.  Prompt Examples
 
 We’ll use **one** running example so every prompt builds on the same code: a function that computes the **median** of a list of integers.
 
