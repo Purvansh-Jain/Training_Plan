@@ -72,33 +72,33 @@ Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative p
 
 Here is a curated collection of prompts you can use with GitHub Copilot, RooCode or other AI coding assistants.  They are grouped by category and correspond to the examples and exercises in this repository.  Feel free to modify the prompts to better fit your codebase.
 
-1Python – Data Processing
+## Python – Data Processing
 
-### Implement Statistics
+1.Implement Statistics
 
 Use the following prompt to implement the `calculate_student_statistics` function:
 
     You are a Python developer.  Implement the function `calculate_student_statistics` in `python_examples/data_processing.py`.  It should take a list of numeric scores and return a tuple of (average, median, maximum).  The average should be rounded to two decimal places.  Raise a `ValueError` if the list is empty.
 
-### Normalise Scores
+2. Normalise Scores
 
     Implement `normalise_scores` in `python_examples/data_processing.py`.  Given a list of scores and an optional target, scale the scores proportionally so that the highest score equals the target.  Preserve the original order.  If the list is empty, return an empty list.  If the maximum is zero, return a list of zeros.
 
-### Group by Grade
+3. Group by Grade
 
     Implement the `group_by_grade` function in `python_examples/data_processing.py`.  Group numeric scores into letter grades (A: 90–100, B: 80–89, C: 70–79, D: 60–69, F: <60) and return a dictionary mapping each grade to its list of scores.  Exclude empty grades.
 
-2 Python – File I/O
+## 2 Python – File I/O
 
-### Parse CSV Content
+1. Parse CSV Content
 
     Implement `parse_csv_content` in `python_examples/file_io.py`.  The function takes a CSV string with a header and returns a list of dictionaries keyed by column names.  Strip whitespace, ignore empty lines, pad missing fields with `None` and name extra fields `extra_1`, `extra_2`, etc.
 
-### Load CSV File
+2. Load CSV File
 
     Implement `load_csv_file` in `python_examples/file_io.py`.  Given a file path, read the file content and pass it to `parse_csv_content`.  If the file does not exist, raise `FileNotFoundError`.
 
-### Summarise Log File
+3. Summarise Log File
 
     Implement `summarise_log_file` in `python_examples/file_io.py`.  Read a log file and return a dictionary with `line_count` (non‑empty lines), `error_count` (lines containing "ERROR" case-insensitive) and `warnings` (unique warning messages after the prefix "WARNING:").
 
