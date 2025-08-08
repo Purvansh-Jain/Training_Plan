@@ -70,7 +70,7 @@ Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative p
 
 ## D]  Training Exercises
 
-Use the exercises in the `training_repo_final` to practise prompt engineering.  Focus on Python tasks and apply the principles above.  After each task, review the generated code, adjust your prompts and rerun the model.
+Use the exercises in the `training_repo` to practise prompt engineering.  Focus on Python tasks and apply the principles above.  After each task, review the generated code, adjust your prompts and rerun the model.
 
 1. **Password Validation** – Prompt the AI to implement a function `is_strong_password(password: str) -> bool` based on specific criteria.  Ask for type hints, a docstring and example calls.
 2. **Sorting Algorithms** – Ask the model to implement bubble sort, selection sort and merge sort on a list of integers.  Request a complexity analysis and test cases.  Compare the generated algorithms and discuss which is more efficient.
@@ -95,7 +95,7 @@ Videos:
 |-----------------------------|-------------------------------------------------------|-------------------------------------------------------------------|---------------------------------------------------|
 | Prompt Engineering Basics   | *Prompt Engineering for Beginners*                   | [Watch](https://youtu.be/riO3e-FBieA?si=86gIO74zk2tYrjSW)               | Introduction to prompt design and common pitfalls. |
 | Advanced Prompt Techniques  | *Advanced Prompt Engineering with GPT-4*             | [Watch](https://youtu.be/-XivIt_5oSw?si=agLozvFqrGiLT4Oz)               | Covers complex tasks, multi‑step prompts and more. |
-| Demo    | *How I Use ChatGPT to Build a Flask API*             | [Watch](https://youtu.be/yyO-FMsS0yY?si=BrsJZgwRP0HfTTNH)               | Shows iterative prompting to build a real project. |
+| Demo    | *Master the core principles of prompt engineering with GitHub Copilot*             | [Watch](https://youtu.be/hh1nOX14TyY?si=flrngVtmrDbwFYEv)               | Shows iterative prompting to build a real project. |
 
 ---
 
