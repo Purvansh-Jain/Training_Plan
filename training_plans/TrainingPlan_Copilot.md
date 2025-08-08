@@ -44,20 +44,20 @@ Before using GitHub Copilot, ensure you meet these prerequisites:
 
 This section walks you through installing the Copilot extension, authenticating via the organisation’s account and enabling suggestions.  It also introduces optional features like Copilot Chat and Agentic mode.
 
-### 1  Install the Copilot Extension
+### 1.  Install the Copilot Extension
 
 1. **Open VS Code**.
 2. Press `Ctrl+Shift+X` (or click the Extensions icon) to open the Extensions pane.
 3. In the search box, type **“GitHub Copilot”**.  Select the official extension and click **Install**.  Wait until installation completes and the Copilot icon appears in the status bar.
 
-### 2  Authenticate with the Organisation
+### 2.  Authenticate with the Organisation
 
 1. After installation, a prompt will appear asking you to **Sign in to GitHub**.  Click **Sign In**.
 2. Choose **“Continue with GitHub”** and enter your corporate credentials.  Complete any multi‑factor authentication.
 3. When asked to authorise Copilot, confirm that the **Programmers.ai** organisation is listed and click **Authorize**.  This links your Copilot usage to the organisation’s licence.
 4. Return to VS Code.  You should see a confirmation message that Copilot is active.
 
-### 3  Enable Suggestions and Agentic Mode
+### 3.  Enable Suggestions and Agentic Mode
 
 Copilot suggestions appear as faded code (ghost text) while you type.  To control when they appear:
 
@@ -77,7 +77,7 @@ Copilot suggestions appear as faded code (ghost text) while you type.  To contro
 1. Open the Command Palette and run **“Copilot: Agents: Enable/Disable”** (names vary slightly by version). You can also use **“Copilot: Toggle Completions”**, **“Copilot: Open Completions Panel”**, **“Copilot: Explain This Code”**, and **“Copilot: Generate Tests”** to drive agentic workflows.
 2. Ensure it’s **Enabled**.  When agent mode is active, you can instruct Copilot using high‑level tasks like “Migrate this ExpressJS API to FastAPI in Python” or “Convert this AngularJS component to React 18 with TypeScript.”  Copilot will propose changes and ask you to confirm before applying them.
 
-### 4  Install and Use Copilot Chat (Optional)
+### 4.  Install and Use Copilot Chat (Optional)
 
 Copilot Chat is a separate extension that offers a chat interface similar to ChatGPT within VS Code.  To install and use it:
 
@@ -90,15 +90,15 @@ Copilot Chat is a separate extension that offers a chat interface similar to Ch
 
 To maximise Copilot’s usefulness, you need to think like a computer scientist.  This section revisits fundamental algorithms and data structures and shows how they inform prompt design.
 
-### 1  Decomposition and Control Flow
+### 1.  Decomposition and Control Flow
 
 Breaking a problem into clear steps makes it easier for both humans and AI to solve.  For example, to compute statistics on student grades, you might: 1) read the data; 2) parse each record; 3) compute mean, median and mode; 4) format results.  When prompting Copilot, describe these steps explicitly.  For loop‑based tasks, mention the type of loop (`for` vs. `while`) and the stopping condition.  For decision making, specify the conditions and branches.
 
-### 2  Choosing Data Structures
+### 2.  Choosing Data Structures
 
 Data structures influence performance.  Arrays and lists provide fast indexed access; dictionaries offer O(1) lookup; queues and stacks support FIFO/LIFO operations; trees and graphs model hierarchical and network structures.  When you ask Copilot to implement a solution, state which structure to use.  For example: *“Use a dictionary where keys are student IDs and values are lists of assignment scores”* or *“Implement a binary search tree with insertion and search methods.”*  This guidance helps Copilot generate efficient code.
 
-### 3  Time and Space Complexity
+### 3.  Time and Space Complexity
 
 Performance matters, especially in large data sets.  Copilot may generate a naive implementation if you do not specify a complexity requirement.  If you need a sort algorithm faster than O(n²), ask explicitly for merge sort (O(n log n)) or quicksort.  When dealing with memory, mention whether you can afford extra space or require an in‑place algorithm.
 

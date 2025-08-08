@@ -8,11 +8,11 @@ Large‑language models (LLMs) usefulness depends entirely on the **prompts** yo
 
 When you ask a model to “write some code,” you leave it to guess what you need.  If you specify your goal, inputs, expected outputs, constraints and examples, you narrow the possibilities and increase accuracy.  Poorly written prompts lead to incorrect, incomplete or inefficient code; clear prompts result in reliable, maintainable solutions.  The principles of prompt engineering apply across languages and tools.  They are especially important when working with enterprise projects where security, performance and readability are critical.
 
-### 1  Algorithmic Context
+### 1.  Algorithmic Context
 
 Programming tasks are built on algorithms and data structures.  In first‑year computer‑science courses you learn patterns like linear search, binary search, sorting algorithms and recursion.  You also learn to choose between lists, dictionaries, stacks, queues, trees and graphs.  When writing prompts, refer to these patterns explicitly: *“Implement a binary search algorithm”* or *“Use a hash map keyed by user ID”*.  This helps the model understand the performance requirements and data relationships.
 
-### 2  Clarity and Detail
+### 2.  Clarity and Detail
 
 Ambiguity is the enemy of prompt engineering.  Avoid vague terms like “improve,” “better” or “clean up.”  Instead specify what you want to change and why.  For example: *“Refactor this function to reduce its time complexity from O(n²) to O(n log n)”* or *“Rewrite this code to follow PEP 8 style guidelines.”*  Provide the relevant code or function signature so the model has context.  If you need documentation, specify the format (docstring, JSDoc, Markdown) and include examples.
 
@@ -46,23 +46,23 @@ This prompt defines the role, task, input, output, constraints and format, leavi
 
 Use these principles to design prompts that yield accurate and useful results:
 
-### 1  Be Specific
+### 1.  Be Specific
 
 Specify what you want the model to do and how it should do it.  For example, *“Generate a list of prime numbers up to 100 using the Sieve of Eratosthenes”* is better than *“Write a prime generator.”*  Include relevant constraints like time complexity or memory usage.
 
-### 2  Decompose Complex Tasks
+### 2.  Decompose Complex Tasks
 
 Breaking large problems into smaller tasks improves the quality of the output and makes it easier to debug.  For instance, when building a web service, separate prompts for data models, API endpoints, input validation and tests.  This mirrors algorithmic decomposition: solve subproblems and compose the results.
 
-### 3  Provide Examples
+### 3.  Provide Examples
 
 Demonstrate the expected input and output format.  If you want the model to produce a JSON response, include a sample JSON.  For diagrams, provide a small Mermaid snippet.  Examples act as a template the model can emulate.
 
-### 4  Ask for Explanations
+### 4.  Ask for Explanations
 
 When you need to understand code or make improvements, ask the model to explain what the code does and why.  For example: *“Explain how this function calculates the Fibonacci sequence and suggest two optimisations.”*  Explanations reveal the model’s reasoning and help you identify errors or inefficiencies.
 
-### 5  Use Chat Interfaces for Exploration
+### 5.  Use Chat Interfaces for Exploration
 
 Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative prompting.  You can ask for clarifications, request alternative implementations or explore different design choices.  This interactive approach is particularly useful when working on unfamiliar tasks.
 
@@ -70,16 +70,91 @@ Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative p
 
 ## D]  Training Exercises
 
-Use the exercises in the `training_repo` to practise prompt engineering.  Focus on Python tasks and apply the principles above.  After each task, review the generated code, adjust your prompts and rerun the model.
+Here is a curated collection of prompts you can use with GitHub Copilot, RooCode or other AI coding assistants. They are grouped by category and correspond to the examples and exercises in this repository.  Feel free to modify the prompts to better fit your codebase.
 
-1. **Password Validation** – Prompt the AI to implement a function `is_strong_password(password: str) -> bool` based on specific criteria.  Ask for type hints, a docstring and example calls.
-2. **Sorting Algorithms** – Ask the model to implement bubble sort, selection sort and merge sort on a list of integers.  Request a complexity analysis and test cases.  Compare the generated algorithms and discuss which is more efficient.
-3. **File Parsing** – Prompt the AI to write a function that reads a log file, extracts timestamps and error messages and returns a summary dictionary.  Provide a sample log entry and specify error levels to filter.
-4. **Data Transformation** – Ask the model to transform a list of student dictionaries (name, scores) into a dictionary keyed by name with value `Student` objects.  Include methods for computing GPA and printing a transcript.
-5. **Unit Test Generation** – Provide a sample Python function and ask the AI to generate a set of `pytest` tests covering normal and edge cases.  Encourage the model to include descriptive assertion messages.
-6. **Refactoring** – Give the model a legacy function with deep nesting or repeated code.  Ask it to refactor using smaller helper functions or list comprehensions.  Specify improvements such as readability or time complexity.
+### Python – Data Processing
 
-These exercises will sharpen your ability to design prompts that produce reliable code.  For each exercise, write down the prompt you used, note what worked and what did not, and iterate to improve the output.
+1. Implement Statistics
+
+Use the following prompt to implement the `calculate_student_statistics` function:
+
+    You are a Python developer.  Implement the function `calculate_student_statistics` in `python_examples/data_processing.py`.  It should take a list of numeric scores and return a tuple of (average, median, maximum).  The average should be rounded to two decimal places.  Raise a `ValueError` if the list is empty.
+
+2. Normalise Scores
+
+Implement `normalise_scores` in `python_examples/data_processing.py`:
+    
+      Given a list of scores and an optional target, scale the scores proportionally so that the highest score equals the target.  Preserve the original order.  If the list is empty, return an empty list.  If the maximum is zero, return a list of zeros.
+
+3. Group by Grade
+
+Implement the `group_by_grade` function in `python_examples/data_processing.py`:
+    
+     Group numeric scores into letter grades (A: 90–100, B: 80–89, C: 70–79, D: 60–69, F: <60) and return a dictionary mapping each grade to its list of scores.  Exclude empty grades.
+
+### Python – File I/O
+
+1. Parse CSV Content
+
+Implement `parse_csv_content` in `python_examples/file_io.py`: 
+
+    The function takes a CSV string with a header and returns a list of dictionaries keyed by column names.  Strip whitespace, ignore empty lines, pad missing fields with `None` and name extra fields `extra_1`, `extra_2`, etc.
+
+2. Load CSV File
+
+Implement `load_csv_file` in `python_examples/file_io.py`:
+
+    Given a file path, read the file content and pass it to `parse_csv_content`.  If the file does not exist, raise `FileNotFoundError`.
+
+3. Summarise Log File
+
+Implement `summarise_log_file` in `python_examples/file_io.py`: 
+
+    Read a log file and return a dictionary with `line_count` (non‑empty lines), `error_count` (lines containing "ERROR" case-insensitive) and `warnings` (unique warning messages after the prefix "WARNING:").
+
+### Python – API Client
+
+1. Implement GET Method
+
+Implement the `get` method of `ApiClient` in `python_examples/api_client.py`:
+
+    Build the URL from `base_url` and `path`, include headers and query parameters, send a GET request using the `requests` library, raise an exception on non‑2xx status codes and return the parsed JSON response.
+
+2. Implement POST Method
+
+Implement the `post` method of `ApiClient` in `python_examples/api_client.py`:  
+
+    Accept a JSON body dictionary, send it as a POST request to the given `path`, handle errors and return the parsed JSON response.  Consider adding retry logic for transient errors.
+
+### Python – Model Classes
+
+1.  Describe Book
+
+Implement the `describe` method of the `Book` class in `python_examples/model_script.py`:  
+
+    It should return a string in the format `"<title>" by <Author Name> (ISBN: <isbn>)`.
+
+2.  Library Methods
+
+Implement the methods `add_book`, `remove_book`, `search_by_title`, `search_by_author` and `list_books` in the `Library` class (`python_examples/model_script.py`) :
+
+    Ensure case-insensitive searching and proper handling of missing ISBNs.
+
+### Java – Code Migration
+
+1. Legacy to Modern Java
+
+Migrate the class in `java_migration/legacy_java/Example.java` to Java 17.  
+
+    Use generics, streams and Optional to modernise the code.  Create a corresponding test class using JUnit to verify the behaviour.  Compare your result with `java_migration/modern_java/Example.java`.
+
+### Documentation & Diagrams
+
+1. Generate Documentation and Diagram
+
+    In `python_examples/model_script.py`, generate Markdown documentation with docstrings and a Mermaid diagram showing the relationships among `Author`, `Book` and `Library`.  The diagram should depict classes as nodes and references as arrows.
+
+    Create a README for the Student Performance Dashboard described in `requirements/BRD.md`.  Include an overview of the project, setup instructions, API endpoints and a Mermaid diagram illustrating the data flow from ingestion to report generation.
 
 ---
 
