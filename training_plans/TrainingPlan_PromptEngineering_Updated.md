@@ -70,11 +70,9 @@ Tools like Copilot Chat and ChatGPT are ideal for brainstorming and iterative p
 
 ## D]  Training Exercises
 
-# Prompt Library
+Here is a curated collection of prompts you can use with GitHub Copilot, RooCode or other AI coding assistants.  They are grouped by category and correspond to the examples and exercises in this repository.  Feel free to modify the prompts to better fit your codebase.
 
-This file contains a curated collection of prompts you can use with GitHub Copilot, RooCode or other AI coding assistants.  They are grouped by category and correspond to the examples and exercises in this repository.  Feel free to modify the prompts to better fit your codebase.
-
-## Python – Data Processing
+1Python – Data Processing
 
 ### Implement Statistics
 
@@ -90,7 +88,7 @@ Use the following prompt to implement the `calculate_student_statistics` functio
 
     Implement the `group_by_grade` function in `python_examples/data_processing.py`.  Group numeric scores into letter grades (A: 90–100, B: 80–89, C: 70–79, D: 60–69, F: <60) and return a dictionary mapping each grade to its list of scores.  Exclude empty grades.
 
-## Python – File I/O
+2 Python – File I/O
 
 ### Parse CSV Content
 
